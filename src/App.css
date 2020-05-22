@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.Excel input {
+  font: 16px Arial;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Excel td {
+  border-top: 1px solid black;
+  cursor: cell;
+  padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Excel th {
+  cursor: pointer;
+  padding: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Excel table {
+  border: 1px solid black;
+  margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.Excel .toolbar {
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Excel .toolbar a,
+.Excel .toolbar button {
+  /* thanks css3buttongenerator.com! */
+  background: #3498db linear-gradient(
+      to bottom,
+      #3498db,
+      #2980b9
+  );
+  border-radius: 28px;
+  box-shadow: 0 1px 3px #666666;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 0;
+  margin-right: 5px;
+}
+
+.Excel .toolbar a:hover,
+.Excel .toolbar button:hover {
+  background: #3cb0fd linear-gradient(
+      to bottom,
+      #3cb0fd,
+      #3498db
+  );
+  text-decoration: none;
 }
