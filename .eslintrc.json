@@ -26,6 +26,8 @@
     "no-plusplus": "off",
     "no-console": "off",
     "react/jsx-props-no-spreading": "off",
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "no-nested-ternary": "off",
+    "no-shadow": "off"
   }
 }
