@@ -32,6 +32,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -62,7 +63,7 @@
       <workItem from="1590125074441" duration="10058000" />
       <workItem from="1590208403420" duration="2150000" />
       <workItem from="1591057726645" duration="44000" />
-      <workItem from="1591057816865" duration="2320000" />
+      <workItem from="1591057816865" duration="9281000" />
     </task>
     <servers />
   </component>
@@ -74,26 +75,26 @@
       <screen x="0" y="22" width="1366" height="704" />
     </state>
     <state x="423" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.22.1366.704@0.22.1366.704" timestamp="1590142390991" />
-    <state x="100" y="121" width="1166" height="505" maximized="true" key="DiffContextDialog" timestamp="1591060614631">
+    <state x="100" y="121" width="1166" height="505" maximized="true" key="DiffContextDialog" timestamp="1591110588666">
       <screen x="0" y="22" width="1366" height="704" />
     </state>
-    <state x="100" y="121" width="1166" height="505" maximized="true" key="DiffContextDialog/0.22.1366.704@0.22.1366.704" timestamp="1591060614631" />
-    <state width="1343" height="179" key="GridCell.Tab.0.bottom" timestamp="1590154377560">
+    <state x="100" y="121" width="1166" height="505" maximized="true" key="DiffContextDialog/0.22.1366.704@0.22.1366.704" timestamp="1591110588666" />
+    <state width="1343" height="179" key="GridCell.Tab.0.bottom" timestamp="1591110431295">
       <screen x="0" y="22" width="1366" height="704" />
     </state>
-    <state width="1343" height="179" key="GridCell.Tab.0.bottom/0.22.1366.704@0.22.1366.704" timestamp="1590154377560" />
-    <state width="1343" height="179" key="GridCell.Tab.0.center" timestamp="1590154377559">
+    <state width="1343" height="179" key="GridCell.Tab.0.bottom/0.22.1366.704@0.22.1366.704" timestamp="1591110431295" />
+    <state width="1343" height="179" key="GridCell.Tab.0.center" timestamp="1591110431294">
       <screen x="0" y="22" width="1366" height="704" />
     </state>
-    <state width="1343" height="179" key="GridCell.Tab.0.center/0.22.1366.704@0.22.1366.704" timestamp="1590154377559" />
-    <state width="1343" height="179" key="GridCell.Tab.0.left" timestamp="1590154377559">
+    <state width="1343" height="179" key="GridCell.Tab.0.center/0.22.1366.704@0.22.1366.704" timestamp="1591110431294" />
+    <state width="1343" height="179" key="GridCell.Tab.0.left" timestamp="1591110431294">
       <screen x="0" y="22" width="1366" height="704" />
     </state>
-    <state width="1343" height="179" key="GridCell.Tab.0.left/0.22.1366.704@0.22.1366.704" timestamp="1590154377559" />
-    <state width="1343" height="179" key="GridCell.Tab.0.right" timestamp="1590154377560">
+    <state width="1343" height="179" key="GridCell.Tab.0.left/0.22.1366.704@0.22.1366.704" timestamp="1591110431294" />
+    <state width="1343" height="179" key="GridCell.Tab.0.right" timestamp="1591110431295">
       <screen x="0" y="22" width="1366" height="704" />
     </state>
-    <state width="1343" height="179" key="GridCell.Tab.0.right/0.22.1366.704@0.22.1366.704" timestamp="1590154377560" />
+    <state width="1343" height="179" key="GridCell.Tab.0.right/0.22.1366.704@0.22.1366.704" timestamp="1591110431295" />
     <state x="184" y="22" key="SettingsEditor" timestamp="1590126032284">
       <screen x="0" y="22" width="1366" height="704" />
     </state>

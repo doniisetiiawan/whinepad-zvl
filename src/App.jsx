@@ -1,24 +1,26 @@
 import React from 'react';
-import Excel from './components/Excel';
 import Logo from './components/Logo';
+import Whinepad from './components/Whinepad';
+import schema from './schema';
 
 import './App.css';
 
-let headers = localStorage.getItem('headers');
-let data = localStorage.getItem('data');
+let data = JSON.parse(JSON.stringify(localStorage.getItem('data')));
 
-if (!headers) {
-  headers = ['Title', 'Year', 'Rating', 'Comments'];
-  data = [['Test', '2015', '3', 'meh']];
+// default example data, read from the schema
+if (!data) {
+  data = {};
+  schema.forEach((item) => data[item.id] = item.sample);
+  data = [data];
 }
 
 function App() {
   return (
     <div>
-      <h1>
+      <div className="app-header">
         <Logo /> Welcome to Whinepad!
-      </h1>
-      <Excel headers={headers} initialData={data} />
+      </div>
+       <Whinepad schema={schema} initialData={data} />
     </div>
   );
 }

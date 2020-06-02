@@ -148,78 +148,80 @@ class Excel extends Component {
     </Dialog>
   );
 
-  _renderTable = () => (
-    <table>
-      <thead>
-        <tr>{
-        this.props.schema.map((item) => {
-          if (!item.show) {
-            return null;
-          }
-          let title = item.label;
-          if (this.state.sortby === item.id) {
-            title += this.state.descending ? ' \u2191' : ' \u2193';
-          }
-          return (
-            <th
-              className={`schema-${item.id}`}
-              key={item.id}
-              onClick={(item.id) => this._sort(item.id)}
-            >
-              {title}
-            </th>
-          );
-        }, this)
-      }
-          <th className="ExcelNotSortable">Actions</th>
-        </tr>
-      </thead>
-      <tbody onDoubleClick={this._showEditor()}>
-        {this.state.data.map((row, rowidx) => (
-          <tr key={rowidx}>{
-          Object.keys(row).map((cell, idx) => {
-            const schema = this.props.schema[idx];
-            if (!schema || !schema.show) {
+  _renderTable() {
+    return (
+      <table>
+        <thead>
+          <tr>{
+          this.props.schema.map((item) => {
+            if (!item.show) {
               return null;
             }
-            const isRating = schema.type === 'rating';
-            const { edit } = this.state;
-            let content = row[cell];
-            if (!isRating && edit && edit.row === rowidx && edit.key === schema.id) {
-              content = (
-                <form onSubmit={this._save()}>
-                  <FormInput ref="input" {...schema} defaultValue={content} />
-                </form>
-              );
-            } else if (isRating) {
-              content = <Rating readonly defaultValue={Number(content)} />;
+            let title = item.label;
+            if (this.state.sortby === item.id) {
+              title += this.state.descending ? ' \u2191' : ' \u2193';
             }
             return (
-              <td
-                className={classNames({
-                  [`schema-${schema.id}`]: true,
-                  ExcelEditable: !isRating,
-                  ExcelDataLeft: schema.align === 'left',
-                  ExcelDataRight: schema.align === 'right',
-                  ExcelDataCenter: schema.align !== 'left' && schema.align !== 'right',
-                })}
-                key={idx}
-                data-row={rowidx}
-                data-key={schema.id}
+              <th
+                className={`schema-${item.id}`}
+                key={item.id}
+                onClick={() => this._sort(item.id)}
               >
-                {content}
-              </td>
+                {title}
+              </th>
             );
           }, this)
         }
-            <td className="ExcelDataCenter">
-              <Actions onAction={(rowidx) => this._actionClick(rowidx)} />
-            </td>
+            <th className="ExcelNotSortable">Actions</th>
           </tr>
-        ), this)}
-      </tbody>
-    </table>
-  );
+        </thead>
+        <tbody onDoubleClick={(e) => this._showEditor(e)}>
+          {this.state.data.map((row, rowidx) => (
+            <tr key={rowidx}>{
+              Object.keys(row).map((cell, idx) => {
+                const schema = this.props.schema[idx];
+                if (!schema || !schema.show) {
+                  return null;
+                }
+                const isRating = schema.type === 'rating';
+                const { edit } = this.state;
+                let content = row[cell];
+                if (!isRating && edit && edit.row === rowidx && edit.key === schema.id) {
+                  content = (
+                    <form onSubmit={this._save()}>
+                      <FormInput ref="input" {...schema} defaultValue={content} />
+                    </form>
+                  );
+                } else if (isRating) {
+                  content = <Rating readonly defaultValue={Number(content)} />;
+                }
+                return (
+                  <td
+                    className={classNames({
+                      [`schema-${schema.id}`]: true,
+                      ExcelEditable: !isRating,
+                      ExcelDataLeft: schema.align === 'left',
+                      ExcelDataRight: schema.align === 'right',
+                      ExcelDataCenter: schema.align !== 'left' && schema.align !== 'right',
+                    })}
+                    key={idx}
+                    data-row={rowidx}
+                    data-key={schema.id}
+                  >
+                    {content}
+                  </td>
+                );
+              }, this)
+}
+              <td className="ExcelDataCenter">
+                <Actions onAction={(rowidx) => this._actionClick(rowidx)} />
+              </td>
+            </tr>
+          ), this)}
+        </tbody>
+      </table>
+    );
+  }
 
   render() {
     return (
